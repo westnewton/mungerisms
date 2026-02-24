@@ -1,4 +1,4 @@
-import { SITE, Quote, Speech, Book, MentalModel } from "./data";
+import { SITE, Quote, Speech, Book, MentalModel, CognitiveBias } from "./data";
 
 export function websiteSchema() {
   return {
@@ -81,6 +81,35 @@ export function mentalModelsPageSchema(models: MentalModel[]) {
           description: m.description,
         },
       })),
+    },
+  };
+}
+
+export function cognitiveBiasesPageSchema(biases: CognitiveBias[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Charlie Munger's 25 Cognitive Biases",
+    description:
+      "The 25 standard causes of human misjudgment from Charlie Munger's Psychology of Human Misjudgment — the complete list of cognitive biases that distort human decision-making.",
+    url: `${SITE.url}/cognitive-biases`,
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: biases.length,
+      itemListElement: biases.map((b, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        item: {
+          "@type": "DefinedTerm",
+          name: b.name,
+          description: b.description,
+        },
+      })),
+    },
+    isPartOf: {
+      "@type": "CreativeWork",
+      name: "The Psychology of Human Misjudgment",
+      author: { "@type": "Person", name: "Charlie Munger" },
     },
   };
 }

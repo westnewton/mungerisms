@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 const NAV_ITEMS = [
   { label: "Quotes", href: "/quotes" },
   { label: "Mental Models", href: "/mental-models" },
+  { label: "Cognitive Biases", href: "/cognitive-biases" },
   { label: "Timeline", href: "/timeline" },
   { label: "Speeches", href: "/speeches" },
   { label: "Books", href: "/books" },
