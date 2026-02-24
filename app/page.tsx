@@ -161,7 +161,7 @@ export default function HomePage() {
             that cause.
           </p>
           <p style={{ marginTop: 40, fontStyle: "italic", color: "#6B5D4F", fontSize: 14 }}>
-            — [Your Name]
+            — Jason Nista, Editor
           </p>
         </div>
       </section>
