@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@300;400&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+::selection { background: #C4A76C; color: #FAF7F2; }
+
+body {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  background: #FAF7F2;
+  color: #2C2416;
+}
+
+a { color: inherit; }
+
+.nav-link {
+  color: #6B5D4F;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 300;
+  padding: 6px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.nav-link:hover, .nav-link.active { color: #2C2416; }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #C4A76C;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+.section-enter { animation: fadeUp 0.5s ease-out; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.quote-area { transition: opacity 0.5s ease; }
+
+.card {
+  background: #FFFFFF;
+  border: 1px solid #E8E0D4;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  border-color: #C4A76C;
+  box-shadow: 0 4px 20px rgba(139,115,85,0.08);
+  transform: translateY(-2px);
+}
+
+.category-btn {
+  background: none;
+  border: 1px solid #D4C9B8;
+  padding: 6px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #6B5D4F;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.category-btn:hover, .category-btn.active {
+  background: #2C2416;
+  color: #FAF7F2;
+  border-color: #2C2416;
+}
+
+.search-input {
+  background: #FFF;
+  border: 1px solid #D4C9B8;
+  padding: 10px 16px 10px 40px;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 14px;
+  color: #2C2416;
+  width: 100%;
+  max-width: 360px;
+  outline: none;
+  transition: border-color 0.25s ease;
+}
+.search-input:focus { border-color: #C4A76C; }
+.search-input::placeholder { color: #B5A898; }
+
+.timeline-item {
+  position: relative;
+  padding-left: 32px;
+  padding-bottom: 28px;
+  border-left: 1px solid #D4C9B8;
+  margin-left: 80px;
+}
+.timeline-item:last-child { border-left-color: transparent; }
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -4.5px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #C4A76C;
+  border: 2px solid #FAF7F2;
+}
+
+.ext-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 1px solid #D4C9B8;
+  transition: all 0.25s ease;
+  color: #6B5D4F;
+}
+.ext-link:hover { border-color: #C4A76C; color: #2C2416; }
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.dot:hover { background: #8B7355 !important; }
+
+@media (max-width: 640px) {
+  .nav-items { gap: 16px !important; }
+  .timeline-item { margin-left: 60px; }
+}
