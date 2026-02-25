@@ -19,7 +19,27 @@ export default function HomePage() {
   }, []);
 
   return (
-    <main style={{ maxWidth: 720, margin: "0 auto", padding: "130px 32px 0", textAlign: "center" }}>
+    <main style={{ maxWidth: 720, margin: "0 auto", padding: "130px 32px 0", textAlign: "center", position: "relative", overflow: "hidden" }}>
+      {/* Silhouette background */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: 0,
+          right: -40,
+          width: "clamp(300px, 45vw, 480px)",
+          height: "clamp(400px, 60vw, 640px)",
+          backgroundImage: "url(/CharlieMungerBust.png)",
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "bottom right",
+          opacity: 0.06,
+          pointerEvents: "none",
+          zIndex: 0,
+        }}
+      />
+
+      {/* Content layer */}
+      <div style={{ position: "relative", zIndex: 1 }}>
       <p
         style={{
           fontFamily: "'JetBrains Mono', monospace",
@@ -165,6 +185,7 @@ export default function HomePage() {
           </p>
         </div>
       </section>
+      </div>
     </main>
   );
 }
