@@ -30,7 +30,7 @@ export default function HomePage() {
           right: 0,
           width: "clamp(280px, 40vw, 420px)",
           height: "auto",
-          opacity: 0.08,
+          opacity: 0.12,
           filter: "invert(1)",
           pointerEvents: "none",
           zIndex: 0,
