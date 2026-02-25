@@ -33,6 +33,7 @@ export default function HomePage() {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "bottom right",
           opacity: 0.06,
+          filter: "invert(1)",
           pointerEvents: "none",
           zIndex: 0,
         }}
