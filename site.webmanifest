@@ -1,0 +1,13 @@
+{
+  "name": "Mungerisms",
+  "short_name": "Mungerisms",
+  "description": "The collected wisdom of Charlie Munger",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF7F2",
+  "theme_color": "#2C2416",
+  "icons": [
+    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
