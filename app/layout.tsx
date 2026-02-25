@@ -25,6 +25,16 @@ export const metadata: Metadata = {
     "value investing",
   ],
   authors: [{ name: "Mungerisms" }],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png" }],
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -32,11 +42,20 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     title: "Mungerisms — The Collected Wisdom of Charlie Munger",
     description: SITE.description,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Mungerisms — The Collected Wisdom of Charlie Munger",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Mungerisms — The Collected Wisdom of Charlie Munger",
     description: SITE.description,
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
