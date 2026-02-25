@@ -30,7 +30,7 @@ export default function TimelinePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
-      <div className="section-enter" style={{ maxWidth: 900, margin: "0 auto", padding: "100px 32px 100px" }}>
+      <div className="section-enter section-padding" style={{ maxWidth: 900, margin: "0 auto", padding: "100px 32px 100px" }}>
         <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 10, letterSpacing: "3px", textTransform: "uppercase", color: "#C4A76C", marginBottom: 12 }}>Biography</p>
         <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(32px, 5vw, 48px)", fontWeight: 300, color: "#2C2416", marginBottom: 12 }}>A Life of Learning</h1>
         <p style={{ fontFamily: "'Libre Baskerville', serif", fontSize: 15, lineHeight: 1.8, color: "#6B5D4F", maxWidth: 640, marginBottom: 56 }}>

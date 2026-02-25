@@ -19,7 +19,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <main style={{ maxWidth: 720, margin: "0 auto", padding: "130px 32px 0", textAlign: "center", position: "relative", overflow: "hidden" }}>
+    <main className="hero-section" style={{ maxWidth: 720, margin: "0 auto", padding: "130px 32px 0", textAlign: "center", position: "relative", overflow: "hidden" }}>
       {/* Silhouette background */}
       <img
         src="/CharlieMungerBust.png"
@@ -53,6 +53,7 @@ export default function HomePage() {
       </p>
 
       <h1
+        className="hero-title"
         style={{
           fontFamily: "'Cormorant Garamond', serif",
           fontSize: "clamp(44px, 8vw, 76px)",
@@ -79,6 +80,7 @@ export default function HomePage() {
 
       {/* Rotating Quote */}
       <div
+        className="quote-rotator"
         style={{
           borderTop: "1px solid #D4C9B8",
           borderBottom: "1px solid #D4C9B8",
@@ -92,6 +94,7 @@ export default function HomePage() {
       >
         <div className="quote-area" style={{ opacity: fade ? 1 : 0 }}>
           <p
+            className="quote-rotator-text"
             style={{
               fontFamily: "'Cormorant Garamond', serif",
               fontSize: "clamp(20px, 3.2vw, 28px)",
@@ -144,7 +147,7 @@ export default function HomePage() {
       <div style={{ width: 60, height: 1, background: "#C4A76C", margin: "0 auto" }} />
 
       {/* Editor's Note */}
-      <section style={{ maxWidth: 540, margin: "0 auto", padding: "48px 0 100px", textAlign: "left" }}>
+      <section className="editor-note" style={{ maxWidth: 540, margin: "0 auto", padding: "48px 0 100px", textAlign: "left" }}>
         <h2
           style={{
             fontFamily: "'JetBrains Mono', monospace",

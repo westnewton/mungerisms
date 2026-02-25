@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer style={{ borderTop: "1px solid #E8E0D4", padding: 32, textAlign: "center" }}>
+    <footer className="site-footer" style={{ borderTop: "1px solid #E8E0D4", padding: 32, textAlign: "center" }}>
       <p
         style={{
           fontFamily: "'JetBrains Mono', monospace",

@@ -200,6 +200,7 @@ export default function QuotesClient({
 
       {/* ── Library Toggle ── */}
       <section
+        className="section-padding"
         style={{
           maxWidth: 1000,
           margin: "0 auto",
@@ -277,6 +278,7 @@ export default function QuotesClient({
             </div>
 
             <div
+              className="category-filters"
               style={{
                 display: "flex",
                 flexWrap: "wrap",
@@ -310,6 +312,7 @@ export default function QuotesClient({
 
             {/* Quote Grid */}
             <div
+              className="card-grid"
               style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
