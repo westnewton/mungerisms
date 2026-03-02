@@ -1,23 +1,4 @@
-"use client";
-
-import { useState, useEffect } from "react";
-import { QUOTES } from "@/lib/data";
-
 export default function HomePage() {
-  const [currentQuote, setCurrentQuote] = useState(0);
-  const [fade, setFade] = useState(true);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setFade(false);
-      setTimeout(() => {
-        setCurrentQuote((prev) => (prev + 1) % QUOTES.length);
-        setFade(true);
-      }, 500);
-    }, 7000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <main className="hero-section" style={{ maxWidth: 720, margin: "0 auto", padding: "130px 32px 0", textAlign: "center", position: "relative", overflow: "hidden" }}>
       {/* Silhouette background */}
@@ -78,69 +59,40 @@ export default function HomePage() {
         1924 — 2023
       </p>
 
-      {/* Rotating Quote */}
+      {/* Featured Quote */}
       <div
-        className="quote-rotator"
         style={{
           borderTop: "1px solid #D4C9B8",
           borderBottom: "1px solid #D4C9B8",
           padding: "48px 0",
-          marginBottom: 24,
-          minHeight: 180,
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
+          marginBottom: 100,
         }}
       >
-        <div className="quote-area" style={{ opacity: fade ? 1 : 0 }}>
-          <p
-            className="quote-rotator-text"
-            style={{
-              fontFamily: "'Cormorant Garamond', serif",
-              fontSize: "clamp(20px, 3.2vw, 28px)",
-              fontStyle: "italic",
-              lineHeight: 1.55,
-              color: "#3D3425",
-              maxWidth: 580,
-              margin: "0 auto 20px",
-            }}
-          >
-            &ldquo;{QUOTES[currentQuote].text}&rdquo;
-          </p>
-          <p
-            style={{
-              fontFamily: "'JetBrains Mono', monospace",
-              fontSize: 10,
-              letterSpacing: "1.5px",
-              textTransform: "uppercase",
-              color: "#B5A898",
-            }}
-          >
-            — {QUOTES[currentQuote].source}
-          </p>
-        </div>
-      </div>
-
-      {/* Dots */}
-      <div style={{ display: "flex", justifyContent: "center", gap: 8, marginBottom: 100 }}>
-        {QUOTES.slice(0, 12).map((_, i) => (
-          <div
-            key={i}
-            className="dot"
-            onClick={() => {
-              setFade(false);
-              setTimeout(() => {
-                setCurrentQuote(i);
-                setFade(true);
-              }, 300);
-            }}
-            style={{
-              width: currentQuote === i ? 20 : 6,
-              borderRadius: currentQuote === i ? 3 : "50%",
-              background: currentQuote === i ? "#C4A76C" : "#D4C9B8",
-            }}
-          />
-        ))}
+        <p
+          className="quote-rotator-text"
+          style={{
+            fontFamily: "'Cormorant Garamond', serif",
+            fontSize: "clamp(20px, 3.2vw, 28px)",
+            fontStyle: "italic",
+            lineHeight: 1.55,
+            color: "#3D3425",
+            maxWidth: 580,
+            margin: "0 auto 20px",
+          }}
+        >
+          &ldquo;Spend each day trying to be a little wiser than you were when you woke up.&rdquo;
+        </p>
+        <p
+          style={{
+            fontFamily: "'JetBrains Mono', monospace",
+            fontSize: 10,
+            letterSpacing: "1.5px",
+            textTransform: "uppercase",
+            color: "#B5A898",
+          }}
+        >
+          — Poor Charlie&rsquo;s Almanack
+        </p>
       </div>
 
       {/* Divider */}
