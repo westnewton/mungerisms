@@ -97,7 +97,7 @@ export default function QuotesClient({
         </p>
 
         <button className="oracle-btn" onClick={consult} disabled={isThinking}>
-          {isThinking ? "Consulting…" : hasRevealed ? "Ask Again" : "Get a Random Quote"}
+          {isThinking ? "Consulting…" : hasRevealed ? "Consult Again" : "Consult Charlie"}
         </button>
 
         {/* Quote output area */}
