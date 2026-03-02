@@ -48,7 +48,6 @@ export default function QuotesClient({
       {/* ── Oracle Hero ── */}
       <section
         style={{
-          minHeight: "70vh",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -69,7 +68,7 @@ export default function QuotesClient({
             marginBottom: 16,
           }}
         >
-          The Oracle
+          Quotes
         </p>
         <h1
           style={{
@@ -81,7 +80,7 @@ export default function QuotesClient({
             lineHeight: 1.2,
           }}
         >
-          Munger Oracle
+          The Munger Oracle
         </h1>
         <p
           style={{
@@ -93,26 +92,42 @@ export default function QuotesClient({
             maxWidth: 480,
           }}
         >
-          Seek a fragment of wisdom from Charlie Munger&rsquo;s collected
-          remarks.
+          Press the button to receive a random quote from Charlie Munger&rsquo;s
+          collected wisdom — drawn from speeches, shareholder meetings, and interviews.
         </p>
 
         <button className="oracle-btn" onClick={consult} disabled={isThinking}>
-          {isThinking ? "Consulting…" : hasRevealed ? "Ask Again" : "Consult the Oracle"}
+          {isThinking ? "Consulting…" : hasRevealed ? "Ask Again" : "Get a Random Quote"}
         </button>
 
-        {/* Suspense / Reveal area */}
+        {/* Quote output area */}
         <div
           style={{
-            minHeight: 200,
+            marginTop: 48,
+            width: "100%",
+            minHeight: 160,
+            border: oracleQuote && !isThinking ? "none" : "1px dashed #D4C9B8",
+            borderRadius: 4,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            marginTop: 48,
-            width: "100%",
+            transition: "border-color 0.3s ease",
           }}
         >
+          {!isThinking && !oracleQuote && (
+            <p
+              style={{
+                fontFamily: "'Libre Baskerville', serif",
+                fontSize: 14,
+                fontStyle: "italic",
+                color: "#B5A898",
+              }}
+            >
+              Your quote will appear here
+            </p>
+          )}
+
           {isThinking && (
             <div className="oracle-thinking" style={{ display: "flex", gap: 8 }}>
               <span className="oracle-dot" />
