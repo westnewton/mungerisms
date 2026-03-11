@@ -26,7 +26,7 @@ export default function HomePage() {
           fontSize: 10,
           letterSpacing: "3px",
           textTransform: "uppercase",
-          color: "#B5A898",
+          color: "#7A6E60",
           marginBottom: 20,
         }}
       >
@@ -52,7 +52,7 @@ export default function HomePage() {
           fontFamily: "'JetBrains Mono', monospace",
           fontSize: 11,
           letterSpacing: "2.5px",
-          color: "#B5A898",
+          color: "#7A6E60",
           marginBottom: 64,
         }}
       >
@@ -75,7 +75,7 @@ export default function HomePage() {
             fontSize: "clamp(20px, 3.2vw, 28px)",
             fontStyle: "italic",
             lineHeight: 1.55,
-            color: "#3D3425",
+            color: "#2C2416",
             maxWidth: 580,
             margin: "0 auto 20px",
           }}
@@ -88,7 +88,7 @@ export default function HomePage() {
             fontSize: 10,
             letterSpacing: "1.5px",
             textTransform: "uppercase",
-            color: "#B5A898",
+            color: "#7A6E60",
           }}
         >
           — Poor Charlie&rsquo;s Almanack
@@ -113,7 +113,7 @@ export default function HomePage() {
           A Note from the Editor
         </h2>
 
-        <div style={{ fontFamily: "'Libre Baskerville', serif", fontSize: 15, lineHeight: 1.9, color: "#4A3F32" }}>
+        <div style={{ fontFamily: "'Libre Baskerville', serif", fontSize: 15, lineHeight: 1.9, color: "#3D3425" }}>
           <p style={{ marginBottom: 20 }}>
             Charlie Munger spent nearly a century collecting wisdom — from books, from mistakes, from
             disciplines most people never think to study. He gave it away freely, in shareholder meetings
@@ -134,7 +134,7 @@ export default function HomePage() {
             Charlie believed wisdom acquisition was a moral duty. Consider this a small contribution to
             that cause.
           </p>
-          <p style={{ marginTop: 40, fontStyle: "italic", color: "#6B5D4F", fontSize: 14 }}>
+          <p style={{ marginTop: 40, fontStyle: "italic", color: "#4A3F32", fontSize: 14 }}>
             — Jason Nista, Editor
           </p>
         </div>
